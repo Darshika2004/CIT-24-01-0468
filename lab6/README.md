@@ -53,62 +53,63 @@ lab6/
 ├── answers.md
 └── README.md
 
+
 ## 🚀 Step-by-Step Implementation & Proofs
 
 ### Part 1: Cluster Architecture
 - Verified cluster components using `kubectl get pods -n kube-system`.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%201.1%20Screenshot.png?raw=true" width="100%" />
+![Task 1.1](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%201.1%20Screenshot.png)
 
 ### Part 2: Pod Deployment
 - Created and tested the initial frontend pod using `pod-frontend.yaml`.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/task2.1%20Screenshot.png?raw=true" width="100%" />
+![Task 2.1](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/task2.1%20Screenshot.png)
 
 ### Part 3: Self-Healing with Deployments
 - Observed Kubernetes self-healing behavior before and after deleting a pod.
 - **Before Deleting Pod:**
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%203.1%20Before%20screenshot.png?raw=true" width="100%" />
+![Task 3.1 Before](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%203.1%20Before%20screenshot.png)
 
 - **After Deleting Pod (Self-Healed):**
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%203.1%20After%20screenshot.png?raw=true" width="100%" />
+![Task 3.1 After](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%203.1%20After%20screenshot.png)
 
 ### Part 4: Scaling
 - Scaled frontend replicas up to 5 and down to 2 using `kubectl scale`.
 - **Before Scale:**
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%204.1%20Before%20screenshot.png?raw=true" width="100%" />
+![Task 4.1 Before](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%204.1%20Before%20screenshot.png)
 
 - **Scale Up to 5:**
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%204.1%20After%20scale%20up%20screenshot.png?raw=true" width="100%" />
+![Task 4.1 Scale Up](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%204.1%20After%20scale%20up%20screenshot.png)
 
 - **Scale Down to 2:**
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%204.1%20After%20scale%20down%20screenshot.png?raw=true" width="100%" />
+![Task 4.1 Scale Down](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%204.1%20After%20scale%20down%20screenshot.png)
 
 ### Part 5: Exposing Services
 - Exposed frontend via NodePort service and accessed via browser using `minikube service`.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%205.1%20screenshot.png?raw=true" width="100%" />
+![Task 5.1](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%205.1%20screenshot.png)
 
 ### Part 6: Rolling Updates & Rollbacks
 - Performed zero-downtime rolling update and executed a rollback using `kubectl rollout undo`.
 - **Rolling Update:**
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%206.1%20Rolling%20update%20screenshot.png?raw=true" width="100%" />
+![Task 6.1 Rolling Update](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%206.1%20Rolling%20update%20screenshot.png)
 
 - **Rollback:**
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%206.1%20Rollback%20screenshot.png?raw=true" width="100%" />
+![Task 6.1 Rollback](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%206.1%20Rollback%20screenshot.png)
 
 ### Part 7: Full Multi-Container App Deployment
 - Deployed Frontend, API, Cache, and Database (StatefulSet) tiers.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%207.1%20screenshot.png?raw=true" width="100%" />
+![Task 7.1](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%207.1%20screenshot.png)
 
 - Verified internal network connectivity using a debug container.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%207.2%20screenshot.png?raw=true" width="100%" />
+![Task 7.2](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%207.2%20screenshot.png)
 
 ### Part 8: Data Persistence Verification
 - Executed SQL query, deleted `postgres-0` pod, and verified data retention after restart.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%208.1%20screenshot.png?raw=true" width="100%" />
+![Task 8.1](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%208.1%20screenshot.png)
 
 ### Part 9: Observability & Troubleshooting
 - Investigated pod failures (`ErrImagePull` / `ImagePullBackOff`) using `kubectl describe`.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%209.1%20sceernshot.png?raw=true" width="100%" />
+![Task 9.1](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%209.1%20sceernshot.png)
 
 ### Part 10: Cleanup
 - Removed all created resources and stopped Minikube cluster.
-<img src="https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%2010.1%20screenshot.png?raw=true" width="100%" />
+![Task 10.1](https://github.com/Darshika2004/CIT-24-01-0468/blob/main/lab6/screenshots/Task%2010.1%20screenshot.png)
